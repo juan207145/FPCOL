@@ -1,0 +1,616 @@
+/* --------------------------------------
+   ESTILO GENERAL DEL CUERPO DE LA PÁGINA
+----------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #222222; /* Color de texto general */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usa Flexbox para organizar contenido */
+    flex-direction: column; /* Apila elementos verticalmente */
+    align-items: center; /* Centra elementos horizontalmente */
+}
+#footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 19px;
+  width: 100vw;  /* ancho total de la ventana */
+  position: center;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;  /* contenido centrado dentro */
+  padding: 0 15px; /* un poco de espacio interno para que no toque los bordes */
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center; /* centra horizontalmente el contenido */
+    align-items: center; /* alinea verticalmente */
+    padding: 20px; /* Espaciado interno */
+    gap: 20px; /* espacio entre texto e imagen */
+    flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+}
+.contenedor h1 {
+    margin: 0; /* Elimina el margen externo por defecto del h1 */
+    font-size: 2.5em; /* Tamaño de fuente grande para destacar el título */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    flex: 1; /* Permite que el h1 crezca y ocupe el espacio disponible en un contenedor flex */
+}
+
+/* Imagen dentro del contenedor */
+.contenedor img {
+    width: 100px; /* Define un ancho fijo para la imagen */
+    height: auto; /* Mantiene la proporción original al cambiar el ancho */
+}
+
+/*-----------------------------------------
+    Barra de navegación
+-----------------------------------------*/
+
+/* Estilo general del contenedor de navegación */
+#barraNavegacion {
+    position: sticky; /* Hace que la barra permanezca fija en la parte superior al hacer scroll */
+    top: 0; /* Posición superior 0 (pegada arriba) */
+    z-index: 1000; /* Se asegura de que la barra esté por encima de otros elementos */
+    background-color: #000; /* Fondo negro para la barra */
+    padding: 7px 0; /* Espaciado vertical (arriba y abajo) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+    margin-top: 0; /* Elimina margen superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+
+/* Lista de elementos del menú de navegación */
+#barraNavegacion ul {
+    display: flex; /* Usa modelo flexbox para organizar los ítems horizontalmente */
+    flex-direction: row; /* Alineación horizontal */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    align-items: center; /* Centra los ítems verticalmente */
+    gap: 20px; /* Espacio entre cada ítem */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Sin margen exterior */
+    padding: 0; /* Sin relleno interior */
+}
+
+/* Estilo de los enlaces dentro de la lista */
+#barraNavegacion li a {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 15px; /* Espacio interno para mayor área clickeable */
+    transition: background 0.3s ease; /* Transición suave para el efecto hover */
+    display: block; /* Hace que todo el área sea clickeable */
+}
+
+/* Estilo cuando el cursor pasa sobre un enlace */
+#barraNavegacion li a:hover {
+    background-color: #444; /* Cambia el fondo al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/*-----------------------------------------
+    Estilos Responsivos para pantallas pequeñas
+-----------------------------------------*/
+@media (max-width: 768px) {
+    /* Cambia el diseño del menú a vertical */
+    #barraNavegacion ul {
+        flex-direction: column; /* Ítems uno debajo del otro */
+        align-items: center; /* Centra los ítems */
+        gap: 10px; /* Reduce el espacio entre ítems */
+    }
+
+    /* Ajusta los enlaces para pantallas pequeñas */
+    #barraNavegacion li a {
+        font-size: 16px; /* Tamaño de fuente adecuado para móviles */
+        width: 100%; /* Que ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto en cada ítem */
+    }
+}
+
+/* --------------------------------------
+   ENCABEZADO PRINCIPAL
+----------------------------------------- */
+
+/* ---------- ESTILO GENERAL ---------- */
+
+/* Aplica a todos los elementos */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada para todo el sitio */
+    background-color: #f4f4f4; /* Color de fondo gris claro para el cuerpo */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno general */
+}
+
+/* ---------- ENCABEZADO ---------- */
+
+header.contenedor {
+    background-color: #000; /* Fondo negro para el encabezado */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra todo el texto */
+    padding: 25px 10px; /* Espaciado interno arriba/abajo y lados */
+    border-radius: 12px; /* Bordes redondeados */
+    margin: 20px auto; /* Espaciado externo y centrado horizontal */
+    max-width: 1450px; /* Ancho máximo para evitar que se estire demasiado */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.contenedor h1 {
+    font-size: 2.5em; /* Tamaño grande para el título principal */
+    margin: 0; /* Elimina margen extra del h1 */
+}
+
+.contenedor img {
+    width: 120px; /* Ancho fijo de la imagen */
+    height: auto; /* Altura automática para mantener proporción */
+    border-radius: 8px; /* Bordes redondeados para suavizar la imagen */
+    margin-right: 20px; /* Separación derecha (por si se alinea con texto) */
+}
+
+/* ---------- SECCIONES ---------- */
+
+section {
+    background-color: #fff; /* Fondo blanco para cada sección */
+    padding: 20px; /* Espaciado interno para contenido */
+    margin: 20px auto; /* Margen vertical y centrado horizontalmente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.624); /* Sombra para efecto de profundidad */
+    max-width: 1450px; /* Limita el ancho máximo */
+    width: 100%; /* Ancho completo disponible */
+}
+
+/* ---------- CONTENIDO FLEXIBLE ---------- */
+
+.contenido-flex {
+    display: flex; /* Utiliza Flexbox para organizar el contenido */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas si es necesario */
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
+
+/* Texto dentro del contenedor flexible */
+.texto {
+    flex: 1 1 300px; /* Tamaño flexible, mínimo de 300px */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Imagen alineada a la derecha dentro de un contenedor flexible */
+.imagen-derecha {
+    flex: 1 1 300px; /* Tamaño flexible, mínimo de 300px */
+    text-align: center; /* Centra la imagen dentro del contenedor */
+}
+
+.imagen-derecha img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    max-width: 500px; /* No se agranda más allá de 500px */
+    height: auto; /* Mantiene proporción original */
+    border-radius: 8px; /* Bordes redondeados para suavizar la imagen */
+}
+
+/* ---------- TITULOS ---------- */
+
+h2 {
+    color: #393939; /* Color gris oscuro para subtítulos */
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+}
+
+h3, h4 {
+    color: #1c1c1c; /* Color aún más oscuro para mayor jerarquía */
+    margin-top: 15px; /* Espacio superior menor que el h2 */
+}
+
+
+/* ---------- LISTAS ---------- */
+ul {
+    list-style-position: inside; /* Viñetas dentro del contenedor */
+    text-align: center; /* Centrar texto de cada ítem */
+    padding-left: 0; /* Eliminar sangría izquierda */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+li {
+    text-align: center; /* Centrar texto de cada ítem */
+}
+
+/* ---------- RESPONSIVE: PANTALLAS PEQUEÑAS ---------- */
+/* Aplica estilos cuando la pantalla tiene un ancho máximo de 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .contenedor h1 {
+        font-size: 2em; /* Reduce el tamaño del título principal para adaptarse a pantallas pequeñas */
+    }
+
+    .contenido-flex {
+        flex-direction: column; /* Cambia de fila (horizontal) a columna (vertical) */
+        align-items: center; /* Centra los elementos hijos en el eje horizontal */
+        text-align: center; /* Centra el texto */
+    }
+
+    .texto, .imagen-derecha {
+        flex: 1 1 100%; /* Ocupan el 100% del ancho disponible */
+    }
+
+    header, section {
+        margin: 15px 10px; /* Reduce el margen externo para pantallas pequeñas */
+        padding: 15px; /* Ajusta el espaciado interno */
+    }
+
+    .contenedor img {
+        width: 80px; /* Reduce el tamaño de las imágenes */
+    }
+}
+
+
+/* --------------------------------------
+   TARJETAS DE PRODUCTOS O ELEMENTOS INTERACTIVOS
+----------------------------------------- */
+
+/* Estilo para secciones internas dentro de otra sección (productos u otros elementos interactivos) */
+section > section {
+    padding: 20px; /* Espaciado interno */
+    background-color: #fdfdfd; /* Fondo ligeramente gris */
+    border-top: 2px solid #ccc; /* Línea superior para separar visualmente */
+}
+
+/* Estilo base del contenedor de cada producto */
+.btn-container {
+    display: inline-block; /* Se comporta como un bloque pero se puede alinear en línea */
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    max-width: 200px; /* No excede los 200px de ancho */
+    margin: 15px; /* Margen exterior para separación entre tarjetas */
+    text-align: center; /* Centra todo el contenido dentro */
+    background-color: #ffffff; /* Fondo blanco para resaltar el contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    transition: transform 0.3s ease; /* Suaviza el efecto de movimiento */
+    vertical-align: top; /* Alinea las tarjetas desde la parte superior */
+}
+
+/* Efecto visual cuando se pasa el mouse sobre una tarjeta */
+.btn-container:hover {
+    transform: translateY(-8px); /* Eleva visualmente la tarjeta */
+}
+
+/* Imagen dentro de la tarjeta */
+.btn-container img {
+    width: 90%; /* La imagen ocupa el 90% del ancho del contenedor */
+    height: auto; /* Mantiene proporciones originales */
+    border-bottom: 1px solid #eee; /* Línea separadora debajo de la imagen */
+    border-radius: 10px; /*Borde redondo*/
+}
+
+/* Nombre del producto */
+.btn-container h5 {
+    margin: 10px 0 5px; /* Márgenes superior e inferior para separar del resto del contenido */
+    font-size: 1.1em; /* Tamaño del texto ligeramente mayor */
+    color: #333; /* Color gris oscuro para buen contraste */
+}
+
+/* Precio del producto */
+.btn-container p {
+    font-size: 1.2em; /* Tamaño más grande que el nombre */
+    color: #222; /* Color negro más intenso */
+    margin: 5px 0; /* Espaciado vertical */
+}
+
+/* Botón para agregar al carrito */
+.btn-container button {
+    background-color: #00cd0a; /* Fondo verde brillante */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno para tamaño del botón */
+    margin: 10px 0; /* Separación vertical con otros elementos */
+    border-radius: 5px; /* Bordes redondeados para estilo amigable */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color de fondo */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-container button:hover {
+    background-color: #00a313; /* Color más oscuro al hacer hover */
+}
+/* --------------------------------------
+   DISEÑO RESPONSIVO
+----------------------------------------- */
+
+/* En pantallas de al menos 768px de ancho (tablets y más grandes) */
+@media screen and (min-width: 768px) {
+    .btn-container {
+        width: 48%; /* Muestra 2 tarjetas de producto por fila */
+    }
+}
+
+/* En pantallas de al menos 1024px de ancho (pantallas grandes o escritorios) */
+@media screen and (min-width: 1024px) {
+    .btn-container {
+        width: 22%; /* Muestra 4 tarjetas de producto por fila */
+    }
+}
+
+/* Estilo para títulos h3 y h4 dentro de secciones */
+section h3, section h4 {
+    margin-top: 30px; /* Espacio superior para separar del contenido anterior */
+}
+
+/* Espaciado entre subsecciones dentro de una sección principal */
+section > section {
+    margin-top: 40px; /* Espacio superior entre secciones anidadas */
+}
+
+/* En pantallas pequeñas (máximo 600px de ancho) */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduce el padding general en el cuerpo */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce el tamaño del título principal */
+    }
+
+    section {
+        padding: 15px; /* Ajusta el espaciado interno de las secciones */
+    }
+}
+
+
+/* --------------------------------------
+   CONTENEDOR DE LA FORMACIÓN (CANCHA Y LISTA)
+----------------------------------------- */
+
+/* Contenedor flexible que incluye la cancha y, posiblemente, la lista de jugadores */
+.formacion-container {
+    display: flex; /* Activa el modelo Flexbox */
+    gap: 40px; /* Espacio entre los elementos hijos */
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio del eje vertical */
+}
+
+
+/* --------------------------------------
+   DISEÑO DE LA CANCHA
+----------------------------------------- */
+
+/* Representación vertical de una cancha de fútbol */
+.cancha-vertical {
+    position: relative; /* Permite posicionar elementos hijos absolutamente */
+    width: 90vw; /* Ocupa el 90% del ancho de la ventana */
+    max-width: 750px; /* No excede los 750px */
+    background: #007f00; /* Color verde césped */
+    border: 4px solid white; /* Borde blanco alrededor de la cancha */
+    border-radius: 10px; /* Bordes redondeados */
+    aspect-ratio: 3/3.2; /* Mantiene una proporción vertical adecuada */
+}
+
+
+/* Línea blanca en el centro de la cancha */
+.linea-central-vertical {
+    position: absolute;
+    top: 50%; /* A mitad del alto */
+    left: 0;
+    width: 100%; /* Cubre todo el ancho */
+    height: 3px; /* Grosor de la línea */
+    background: white; /* Color blanco */
+    transform: translateY(-50%); /* Centra verticalmente la línea */
+}
+
+
+/* Círculo central de la cancha */
+.circulo-central-vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20%; /* 20% del ancho de la cancha */
+    aspect-ratio: 1/1; /* Hace que sea un círculo (misma altura y ancho) */
+    border: 3px solid white; /* Borde blanco */
+    border-radius: 50%; /* Forma circular */
+    transform: translate(-50%, -50%); /* Centra el círculo */
+}
+
+
+/* Punto central (punto de saque) */
+.punto-central-vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5%; /* Tamaño pequeño */
+    aspect-ratio: 1/1;
+    background: white; /* Color blanco */
+    border-radius: 50%; /* Forma de círculo */
+    transform: translate(-50%, -50%); /* Centrado exacto */
+}
+
+
+/* Áreas grande (superiores e inferiores) de la cancha */
+.area {
+    position: absolute;
+    width: 66.6%; /* Ocupa dos tercios del ancho */
+    height: 15%; /* Altura relativa a la cancha */
+    border: 3px solid white; /* Bordes blancos */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+}
+
+/* Área en la parte superior de la cancha */
+.area-arriba {
+    top: 0;
+}
+
+/* Área en la parte inferior de la cancha */
+.area-abajo {
+    bottom: 0;
+}
+/* --------------------------------------
+   ESTILO DE LOS JUGADORES EN LA CANCHA
+----------------------------------------- */
+
+/* Estilo base para cualquier jugador */
+.jugador {
+    position: absolute; /* Posicionamiento libre dentro de la cancha */
+    width: 28px; /* Ancho del círculo que representa al jugador */
+    height: 28px; /* Alto del círculo */
+    border-radius: 50%; /* Forma circular */
+    border: 2px solid white; /* Borde blanco para destacar al jugador */
+}
+
+/* Colores representativos por posición */
+.arquero {
+    background-color: yellow; /* Color amarillo para el portero */
+}
+
+.defensa {
+    background-color: blue; /* Azul para defensores */
+}
+
+.medio {
+    background-color: rgb(54, 54, 54); /* Gris oscuro para mediocampistas */
+}
+
+.delantero {
+    background-color: red; /* Rojo para delanteros */
+}
+
+
+/* --------------------------------------
+   LISTA LATERAL DE JUGADORES (PLANTILLA)
+----------------------------------------- */
+
+/* Contenedor lateral donde se listan los jugadores */
+.plantilla-lista {
+    width: 350px; /* Ancho fijo */
+    height: 800px; /* Altura fija */
+    background: #f9f9f9; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra sutil */
+    overflow-y: auto; /* Scroll vertical si el contenido excede la altura */
+}
+
+/* Título de la plantilla */
+.plantilla-lista h2 {
+    text-align: center; /* Centra el texto */
+    color: rgb(23, 153, 0);  /* Verde destacado */
+}
+
+/* Categoría de jugadores (por posición) */
+.categoria {
+    margin-top: 20px; /* Separación entre categorías */
+}
+
+.categoria h3 {
+    margin-bottom: 8px; /* Espacio debajo del título */
+    color: #222; /* Texto oscuro */
+    border-bottom: 2px solid rgb(0, 174, 12); /* Línea decorativa verde */
+}
+
+/* Lista de jugadores por categoría */
+.categoria ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    text-align: left; /*Alinacion del texto a la izquierda*/
+}
+
+.categoria li {
+    padding: 8px 0;  /* Espaciado entre elementos */
+    border-bottom: 1px solid #ccc;  /* Línea divisoria gris */
+    font-size: 15px;
+    text-align: left;
+}
+
+
+/* --------------------------------------
+   POPUP DE INFORMACIÓN DE JUGADOR
+----------------------------------------- */
+
+/* Ventana emergente oculta inicialmente */
+#popup {
+    display: none; /* Oculta el popup hasta que se active por JS */
+    position: absolute; /* Permite posicionarlo sobre la página */
+    background: #fff; /* Fondo blanco */
+    border: 1px solid rgb(0, 162, 5); /* Borde verde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25); /* Sombra para resaltar */
+    padding: 10px; /* Espacio interno */
+    z-index: 1000; /* Lo pone por encima de otros elementos */
+    font-size: 14px;
+    max-width: 250px; /* Ancho máximo */
+}
+
+/* Contenedor interno del popup */
+.popup-contenido {
+    display: flex; /* Flexbox horizontal */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Espacio entre imagen y detalles */
+}
+
+/* Imagen del jugador dentro del popup */
+.popup-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Texto con los detalles del jugador */
+.popup-detalles {
+    flex: 1;  /* Ocupa el resto del espacio */
+}
+
+/* Estilo para elementos clicables en la lista */
+.jugador-info {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+}
+
+/* Efecto al pasar el mouse sobre un jugador en la lista */
+.jugador-info:hover {
+    background-color: #48ff006c; /* Fondo verde claro translúcido */
+    padding: 2%; /* Ligeramente más espacio para resaltar */
+}
+
+
+/* --------------------------------------
+   BOTÓN DE INFORMACIÓN
+----------------------------------------- */
+
+/* Contenedor que organiza los botones informativos */
+.info-container {
+    display: flex; /* Flexbox horizontal */
+    gap: 35px; /* Espacio entre botones */
+    justify-content: center;  /* Centra los botones en la fila */
+    flex-wrap: wrap; /* Permite que bajen de línea en pantallas pequeñas */
+    margin-top: 20px; /* Separación superior */
+}
+
+/* Botón estilizado */
+.btn-info {
+    background-color: #0e7600; /* Verde oscuro */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Quita subrayado (si es un enlace) */
+    padding: 12px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s; /* Suaviza animaciones */
+    display: inline-block;
+}
+
+/* Efecto hover del botón */
+.btn-info:hover {
+    background-color: #084500; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}

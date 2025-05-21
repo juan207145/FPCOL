@@ -1,0 +1,77 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #0fb700;
+    margin-bottom: 40px;
+}
+
+/* Estilo para cada sección de prenda */
+section {
+    background-color: #ffffff;
+    border-left: 6px solid #13a300;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+/* Título de cada prenda */
+section h2 {
+    color: #000000;
+    margin-top: 0;
+}
+
+/* Precio */
+h5 {
+    margin: 5px 0;
+    color: #555;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+/* Párrafos informativos */
+section p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Texto en negrita dentro del párrafo */
+section p strong {
+    color: #111;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}

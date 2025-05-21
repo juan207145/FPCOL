@@ -1,0 +1,101 @@
+/* Estilo general del body */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Fuente general del sitio */
+  background-color: #f4f4f4; /* Color de fondo gris claro */
+  color: #333; /* Color de texto gris oscuro */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Flexbox para estructura */
+  flex-direction: column; /* Organiza los hijos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+}
+
+/* Título principal */
+h1 {
+  color: #d90000; /* Rojo intenso */
+  font-size: 2.5em; /* Tamaño grande del título */
+  margin-bottom: 20px; /* Separación inferior */
+}
+
+/* Contenedor del carrito */
+#carrito {
+  background-color: white; /* Fondo blanco para destacar */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Relleno interno */
+  width: 90%; /* Ocupa el 90% del ancho del viewport */
+  max-width: 900px; /* Límite de ancho */
+  overflow-x: auto; /* Habilita scroll horizontal si es necesario */
+}
+
+/* Tabla de productos */
+#carrito table {
+  width: 100%; /* Tabla ocupa todo el ancho del contenedor */
+  border-collapse: collapse; /* Elimina espacio entre bordes de celdas */
+}
+
+/* Celdas de encabezado y datos */
+#carrito th, #carrito td {
+  padding: 12px; /* Espaciado interno en celdas */
+  text-align: center; /* Centra contenido horizontalmente */
+  border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+/* Encabezados de la tabla */
+#carrito th {
+  background-color: #d90000; /* Fondo rojo */
+  color: white; /* Texto blanco */
+}
+
+/* Imagen del producto en la tabla */
+#carrito img {
+  max-width: 50px; /* Ancho máximo de imagen */
+  height: auto; /* Altura proporcional */
+  border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Botones generales */
+button {
+  background-color: #d90000; /* Rojo por defecto */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  padding: 8px 12px; /* Espaciado interno */
+  margin: 5px; /* Separación entre botones */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s; /* Transición suave al cambiar color */
+}
+
+/* Cambio de color al pasar el mouse sobre los botones */
+button:hover {
+  background-color: #a80000; /* Rojo más oscuro */
+}
+
+/* Texto del total del carrito */
+p {
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  margin-top: 20px; /* Separación superior */
+}
+
+/* Botón dentro de un enlace (por ejemplo: "Seguir comprando") */
+a button {
+  background-color: #008CBA; /* Azul brillante */
+}
+
+/* Hover sobre botón de enlace */
+a button:hover {
+  background-color: #0070a0; /* Azul más oscuro */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  #carrito th, #carrito td {
+    font-size: 0.85em; /* Tamaño de texto más pequeño */
+    padding: 8px; /* Menor relleno */
+  }
+
+  button {
+    padding: 6px 10px; /* Botones más compactos */
+  }
+}

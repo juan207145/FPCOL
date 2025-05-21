@@ -1,0 +1,104 @@
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #008004;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 8px solid #008000;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #08a300;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Productos */
+section div {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #00c41a;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+section div h2 {
+    color: #059900;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #07d400;
+    margin: 5px 0 15px 0;
+}
+
+h5 {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Descripción y detalles */
+p {
+    margin: 10px 0;
+}
+
+strong {
+    color: #444;
+}
+
+ul {
+    margin-top: 5px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+ul li {
+    margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section div {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
