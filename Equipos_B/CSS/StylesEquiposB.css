@@ -310,14 +310,14 @@ h3, h4 {
 /* Listas sin viñetas externas y texto centrado */
 ul {
     list-style-position: inside; /* Las viñetas aparecen dentro del bloque de texto */
-    text-align: center; /* Centra el contenido de cada ítem */
+    text-align: left; /* Centra el contenido de cada ítem */
     padding-left: 0; /* Elimina sangría a la izquierda */
     margin: 0 auto; /* Centrado horizontal del contenedor */
 }
 
 /* Ítems de listas centrados */
 li {
-    text-align: center; /* Centra el texto de cada elemento de lista */
+    text-align: left; /* Centra el texto de cada elemento de lista */
 }
 /* --------------------------------------
    MEDIA QUERIES - DISEÑO RESPONSIVO
