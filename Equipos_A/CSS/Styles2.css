@@ -182,6 +182,7 @@ section {
     gap: 20px; /* Espacio entre los elementos hijos */
 }
 
+
 /* Texto dentro del contenedor flexible */
 .texto {
     flex: 1 1 300px; /* Tamaño flexible, mínimo de 300px */
@@ -191,14 +192,16 @@ section {
 /* Imagen alineada a la derecha dentro de un contenedor flexible */
 .imagen-derecha {
     flex: 1 1 300px; /* Tamaño flexible, mínimo de 300px */
-    text-align: center; /* Centra la imagen dentro del contenedor */
+    text-align: right; /* Centra la imagen dentro del contenedor */
 }
+
 
 .imagen-derecha img {
     width: 100%; /* Imagen ocupa todo el ancho del contenedor */
     max-width: 500px; /* No se agranda más allá de 500px */
     height: auto; /* Mantiene proporción original */
     border-radius: 8px; /* Bordes redondeados para suavizar la imagen */
+   
 }
 
 /* ---------- TITULOS ---------- */
